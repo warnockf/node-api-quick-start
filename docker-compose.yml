@@ -1,0 +1,15 @@
+version: '3'
+services:
+  
+  api:
+    container_name: api-quick-start
+    build: .
+    command: npm run dev
+    environment:
+      NODE_ENV: development
+      AWS_ACCESS_KEY_ID: foo
+      AWS_SECRET_ACCESS_KEY: bar
+    volumes:
+      - .:/app
+    ports:
+      - "80:3000"
