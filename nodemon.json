@@ -1,0 +1,7 @@
+{
+  "ignore": ["**/__tests__/**", "**/*.spec.ts"],
+  "watch": ["./src/"],
+  "exec": "./node_modules/.bin/babel-node --extensions '.ts' ./src/server.ts",
+  "ext": "ts",
+  "signal": "SIGINT"
+}

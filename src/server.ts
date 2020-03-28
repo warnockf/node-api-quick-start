@@ -1,7 +1,7 @@
-import express from 'express';
-import bodyParser from 'body-parser';
-import settings from './service/settings';
-import helloRouter from './routes/hello';
+import express from "express";
+import bodyParser from "body-parser";
+import settings from "./service/settings";
+import helloRouter from "./routes/hello";
 
 const app = express();
 
@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Register routes
-app.use('/hello', helloRouter);
+app.use("/hello", helloRouter);
 
 // Catch all 404s
 app.use((req, res) => {

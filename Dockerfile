@@ -17,7 +17,7 @@ COPY .env ./
 
 RUN npm install && npm cache clean --force
 
-COPY --from=builder /app/build ./build
+COPY --from=builder /app/dist ./dist
 
 EXPOSE 3000
 

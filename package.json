@@ -1,38 +1,42 @@
 {
-    "name": "api-quick-start",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-        "start": "node build/index.js",
-        "dev": "nodemon --exec babel-node src/index.js",
-        "build": "babel src --out-dir build",
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/warnockf/node-api-quick-start.git"
-    },
-    "author": "",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/warnockf/node-api-quick-start/issues"
-    },
-    "homepage": "https://github.com/warnockf/node-api-quick-start#readme",
-    "dependencies": {
-        "@babel/polyfill": "^7.7.0",
-        "body-parser": "^1.19.0",
-        "core-js": "^3.6.1",
-        "dotenv": "^8.2.0",
-        "express": "^4.17.1"
-    },
-    "devDependencies": {
-        "@babel/cli": "^7.7.7",
-        "@babel/core": "^7.7.7",
-        "@babel/node": "^7.7.7",
-        "@babel/preset-env": "^7.7.7",
-        "eslint": "^6.8.0",
-        "eslint-config-google": "^0.14.0",
-        "nodemon": "^2.0.2"
-    }
+  "name": "api-quick-start",
+  "version": "1.0.0",
+  "description": "A NodeJS API template that uses TypeScript.",
+  "scripts": {
+    "start": "node dist/server.js",
+    "dev": "NODE_ENV=development nodemon",
+    "build": "npm run clean-build && npx babel ./src --ignore '**/*.spec.ts' --source-maps -d ./dist --extensions '.ts'",
+    "clean-build": "rm -rf ./dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/warnockf/node-api-quick-start.git"
+  },
+  "author": "Frank Warnock",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/warnockf/node-api-quick-start/issues"
+  },
+  "homepage": "https://github.com/warnockf/node-api-quick-start#readme",
+  "dependencies": {
+    "@babel/polyfill": "^7.7.0",
+    "@babel/preset-typescript": "^7.9.0",
+    "babel-plugin-module-resolver": "^4.0.0",
+    "body-parser": "^1.19.0",
+    "core-js": "^3.6.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.7.7",
+    "@babel/core": "^7.7.7",
+    "@babel/node": "^7.7.7",
+    "@babel/preset-env": "^7.7.7",
+    "@types/node": "^13.9.5",
+    "eslint": "^6.8.0",
+    "eslint-config-google": "^0.14.0",
+    "nodemon": "^2.0.2",
+    "typescript": "^3.8.3"
+  }
 }

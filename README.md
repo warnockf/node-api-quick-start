@@ -1,5 +1,5 @@
 # node-api-quick-start
-A boilerplate containerized Node API.
+A boilerplate containerized Node API woth TypeScript.
 
 ## Requirements
 - node
